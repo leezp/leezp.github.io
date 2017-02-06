@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>leezp</title>
+<style>
+html, body
+{
+	border: none;
+	overflow: hidden;
+	height: 100%;
+}
+
+body {background-image: url("img/BG.jpg");
+  background-repeat: no-repeat;
+  background-size:100% 100%;  }
+</style>
+<script src="js/Bubbles.js"></script>
+<script type="text/javascript">
+var MAX = 5;
+var i = 0;
+
+function Demo()
+{
+	CreateBubble();
+
+	if(++i < MAX) {
+		setTimeout(Demo, 2000);
+	}
+	var bObj1 = document.getElementById("me0");
+	var bObj2 = document.getElementById("me5");
+	var bObj3 = document.getElementById("me10");
+	var bObj4 = document.getElementById("me15");
+	var bObj5 = document.getElementById("me20");
+	bObj1.onclick = function () {
+		window.location="http://www.leezp.space/blog";     
+	}
+
+        bObj2.onclick = function () {
+		window.location="#";     
+    	}
+}
+function flashTitle(){
+if (document.title=='Rock N Roll!'){
+document.title="Boy?"; 
+}else{
+document.title="Rock N Roll!"; 
+}
+}
+setInterval("flashTitle()",1000)
+</script>
+</head>
+<body onload="Demo()">
+</body>
+</html>
